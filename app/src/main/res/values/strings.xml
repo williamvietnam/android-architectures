@@ -143,4 +143,7 @@
 
     <string name="mess_not_exist_patient_code">Patient code does not exist in Vinmec Healthcare System</string>
     <string name="yes">Yes</string>
+    <string name="information">information</string>
+    <string name="logout_confirm">Logout confirm</string>
+    <string name="no">No</string>
 </resources>

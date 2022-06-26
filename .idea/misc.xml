@@ -6,6 +6,8 @@
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/drawable/bg_oval_grey.xml" value="0.1935" />
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/drawable/bg_white_corners_25dp.xml" value="0.1935" />
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/drawable/ic_close_white.xml" value="0.1935" />
+        <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/layout/widget_dialog_confirm.xml" value="0.24114583333333334" />
+        <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/layout/widget_dialog_error.xml" value="0.181640625" />
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/layout/widget_dialog_info.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/layout/widget_dialog_progress.xml" value="0.2421875" />
         <entry key="..\:/AndroidProjects/AndroidKotlinProjects/base-mvvm-kotlin/app/src/main/res/layout/widget_dialog_warning.xml" value="0.24114583333333334" />
