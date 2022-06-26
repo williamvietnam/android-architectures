@@ -17,14 +17,14 @@ import androidx.viewbinding.ViewBinding
 import com.base.mvvm.R
 import com.base.mvvm.core.utils.ContextUtils
 import com.base.mvvm.core.utils.LocaleHelper
-import com.base.mvvm.core.widget.WidgetDialog
+import com.base.mvvm.core.widget.WidgetProgressDialog
 import java.util.*
 
 abstract class MvvmActivity<VB : ViewBinding> : AppCompatActivity(), MvvmActivityView {
 
     lateinit var binding: VB
     lateinit var updatedContext: ContextWrapper
-    private lateinit var progressDialog: WidgetDialog
+    private lateinit var progressDialog: WidgetProgressDialog
 
     abstract fun getViewBinding(): VB
 
@@ -33,7 +33,7 @@ abstract class MvvmActivity<VB : ViewBinding> : AppCompatActivity(), MvvmActivit
         binding = getViewBinding()
         setContentView(binding.root)
 
-        this.progressDialog = WidgetDialog(this)
+        this.progressDialog = WidgetProgressDialog(this)
 
         initialize()
     }

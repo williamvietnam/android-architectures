@@ -5,7 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import com.base.mvvm.R
 
-class WidgetDialog(context: Context) : Dialog(context, R.style.WidgetDialog) {
+class WidgetProgressDialog(context: Context) : Dialog(context, R.style.WidgetProgressDialog) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
