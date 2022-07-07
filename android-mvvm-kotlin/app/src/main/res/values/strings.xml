@@ -1,10 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BaseMVVM</string>
+    <string name="text_empty" />
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="not_connected_internet">Not connected internet</string>
     <string name="profile_name_relative" translatable="false">%1$s(%2$s)</string>
     <string name="error_title">Error</string>
     <string name="news_list_error_message">Unable to get data, please check your network connection then try again later.</string>
     <string name="news_detail_message">Unable to get data, please check your network connection then try again later.</string>
-    <string name="ok">OK</string>
     <string name="hot_line">0(123) 80 10 80</string>
     <string name="consultation">Consultation</string>
     <string name="consultation_content">Response on 3 minutes</string>
