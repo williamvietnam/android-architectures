@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ToolBarCommon">
+        <attr name="src_left" format="reference" />
+        <attr name="trans_status_bar" format="boolean" />
+        <attr name="src_right" format="string|reference" />
+        <attr name="string_title" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DialogFragmentNavigator">
+        <attr name="android:name" />
+    </declare-styleable>
+    <declare-styleable name="FragmentNavigator">
+        <attr name="android:name" />
+    </declare-styleable>
+    <declare-styleable name="NavHostFragment">
+        <attr name="defaultNavHost" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_bold">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_normal">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="text_bold_16" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="text_bold_14" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="text_bold_10" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="text_bold_12" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="text_bold_18" parent="text_bold">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="text_18" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="text_16" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="text_14" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="text_12" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="text_10" parent="text_normal">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="layout_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="recycler_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <!--        <item name="android:windowEnterAnimation">@anim/slide_up</item>-->
+        <!--        <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+    </style>
+
+</resources>
