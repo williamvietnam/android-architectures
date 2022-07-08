@@ -15,6 +15,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures{
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,10 +32,29 @@ android {
 }
 
 dependencies {
+    // Multidex
+    implementation "androidx.multidex:multidex:2.0.1"
 
+    //dependency injection with dagger2
+    implementation 'com.google.dagger:dagger:2.41'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.41'
+
+    //navigation component
+    implementation 'androidx.navigation:navigation-fragment:2.5.0'
+    implementation 'androidx.navigation:navigation-ui:2.5.0'
+
+    //rx
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    //androidX layout
     implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //material design 2
+    implementation 'com.google.android.material:material:1.6.1'
+
+    //unit test junit
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
