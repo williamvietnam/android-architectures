@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import com.base.mvvm.R
 import com.base.mvvm.core.utilities.dialog.BaseDialog
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class BaseMVVMFragment<BD : ViewDataBinding>(@LayoutRes id: Int) :
     Fragment(id) {
 

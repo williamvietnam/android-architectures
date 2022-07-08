@@ -16,6 +16,9 @@ import com.base.mvvm.core.utilities.dialog.LoadingDialog
 import timber.log.Timber
 import java.lang.ref.WeakReference
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class BaseMVVMActivity<BD : ViewDataBinding> : AppCompatActivity() {
 
     private var _binding: BD? = null

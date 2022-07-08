@@ -6,6 +6,9 @@ import androidx.navigation.NavController
 import timber.log.Timber
 import java.lang.ref.WeakReference
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class BaseNavigatorImpl : BaseNavigator {
 
     override var navController: NavController? = null

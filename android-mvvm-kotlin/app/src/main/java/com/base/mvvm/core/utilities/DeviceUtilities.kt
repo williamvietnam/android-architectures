@@ -24,6 +24,9 @@ import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class DeviceUtilities {
 
     companion object {
@@ -41,31 +44,6 @@ class DeviceUtilities {
             }
             return map
         }
-
-//        fun getFcmDeviceToken(): Observable<String?> {
-//
-//            return Observable.create {
-//                FirebaseInstanceId.getInstance().instanceId
-//                    .addOnSuccessListener { instanceIdResult: InstanceIdResult ->
-//                        val fcmToken = instanceIdResult.token
-//                        Timber.d(fcmToken)
-//                        it.onNext(fcmToken)
-//                        it.onComplete()
-//                    }.addOnFailureListener { it2 ->
-//                        run {
-//                            it.onError(it2)
-//                        }
-//                    }.addOnCanceledListener {
-//                        Timber.tag("FCM token : ").d("ahihi")
-//                    }
-//            }
-//        }
-
-//        fun isDeviceLocked(context: Context?): Boolean {
-//            val keyguardManager =
-//                context!!.getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager //api 23+
-//            return keyguardManager.isDeviceLocked
-//        }
 
         fun isAppVisible(): Boolean {
             return ProcessLifecycleOwner

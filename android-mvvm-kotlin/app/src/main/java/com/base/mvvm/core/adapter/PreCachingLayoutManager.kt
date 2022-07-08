@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class PreCachingLayoutManager : LinearLayoutManager {
     private var extraLayoutSpace = -1
     private var context: Context

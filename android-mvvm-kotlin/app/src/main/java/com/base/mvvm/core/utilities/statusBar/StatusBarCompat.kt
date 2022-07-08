@@ -9,8 +9,10 @@ import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
 /**
- * Utils for status bar
- * Created by qiu on 3/29/16.
+ * Author: William Giang Nguyen | 8/7/2022
+ *
+ *
+ * Utils for status bar.
  */
 object StatusBarCompat {
     //Get alpha color

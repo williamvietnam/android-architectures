@@ -1,5 +1,8 @@
 package com.base.mvvm.core.utilities
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 interface TypeNotifyDataSetChange {
     object NotifyDataSetChange : TypeNotifyDataSetChange
     class NotifyDataInsert(val position: Int) : TypeNotifyDataSetChange

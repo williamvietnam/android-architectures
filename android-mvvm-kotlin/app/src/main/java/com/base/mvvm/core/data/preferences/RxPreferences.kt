@@ -2,6 +2,9 @@ package com.base.mvvm.core.data.preferences
 
 import javax.inject.Singleton
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @Singleton
 interface RxPreferences {
     fun put(key: String, value: String)

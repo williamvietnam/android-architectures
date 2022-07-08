@@ -27,6 +27,9 @@ import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @Module
 @InstallIn(SingletonComponent::class)
 class ApiModule {

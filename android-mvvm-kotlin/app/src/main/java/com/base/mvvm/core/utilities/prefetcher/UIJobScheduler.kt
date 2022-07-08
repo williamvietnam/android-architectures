@@ -5,6 +5,9 @@ import android.os.Looper
 import android.view.Choreographer
 import java.util.*
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 object UIJobScheduler {
     private const val MAX_JOB_TIME_MS: Float = 4f
 

@@ -1,5 +1,8 @@
 package com.base.mvvm.core.utilities.state
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 sealed class BaseRequestState<T> {
     data class Success<T>(val profile: T) : BaseRequestState<T>()
     data class Failure<T>(val errorMessage: String? = null, val throwable: Throwable? = null) :

@@ -5,6 +5,10 @@ package androidx.recyclerview.widget
 import com.base.mvvm.core.utilities.prefetcher.PrefetchRecycledViewPool
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 internal fun RecyclerView.RecycledViewPool.attachToPreventViewPoolFromClearing() {
     this.attach()
 }

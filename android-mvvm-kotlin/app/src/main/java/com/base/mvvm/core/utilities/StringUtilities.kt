@@ -11,6 +11,9 @@ import java.net.URLDecoder
 import java.security.MessageDigest
 import java.util.regex.Pattern
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 object EdtState {
     const val EDT_EMPTY = 0
     const val EDT_NOT_HALFWIDTH_OR_DIGIT = 1
@@ -105,24 +108,6 @@ object StringUtils {
         }
     }
 
-//    fun String.formatPhoneNumber(region: String): String? {
-//        val phoneNumberKit = PhoneNumberUtil.getInstance()
-//        val number = phoneNumberKit.parse(this, region)
-//        if (!phoneNumberKit.isValidNumber(number))
-//            return null
-//
-//        return phoneNumberKit.format(number, PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL)
-//    }
-
-//    fun String.formatPhoneNumber(context: Context, region: String): String? {
-////        val phoneNumberKit = PhoneNumberUtil.createInstance(context)
-////        val number = phoneNumberKit.parse(this, region)
-////        if (!phoneNumberKit.isValidNumber(number))
-////            return null
-////
-////        return phoneNumberKit.format(number, PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL)
-////    }
-
     val String.containsLatinLetter: Boolean
         get() = matches(Regex(".*[A-Za-z].*"))
 
@@ -195,14 +180,6 @@ object StringUtils {
             }
             return path.substring(index + 1)
         }
-
-//    val String.awtColor: Color?
-//        get() {
-//            val r = substring(1, 3).toIntOrNull(16) ?: return null
-//            val g = substring(3, 5).toIntOrNull(16) ?: return null
-//            val b = substring(5, 7).toIntOrNull(16) ?: return null
-//            return Color(r, g, b)
-//        }
 
     val String.creditCardFormatted: String
         get() {

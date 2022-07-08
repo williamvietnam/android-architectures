@@ -4,6 +4,9 @@ import android.content.Context
 import android.os.Environment
 import java.io.File
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 const val JPEG = ".jpg"
 const val PNG = ".png"
 

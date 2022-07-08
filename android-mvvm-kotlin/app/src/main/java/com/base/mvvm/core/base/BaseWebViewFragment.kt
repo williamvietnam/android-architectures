@@ -6,6 +6,9 @@ import android.webkit.WebViewClient
 import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class BaseWebViewFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes id: Int) :
     SaveViewBaseFragment<BD, VM>(id) {
 

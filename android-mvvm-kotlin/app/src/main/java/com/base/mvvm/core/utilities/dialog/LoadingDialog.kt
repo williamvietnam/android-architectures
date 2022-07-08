@@ -10,6 +10,9 @@ import android.view.LayoutInflater
 import com.base.mvvm.R
 import java.lang.ref.WeakReference
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class LoadingDialog private constructor(private var context: Context?) {
     private var isShow = false
     private lateinit var dialog: AlertDialog
