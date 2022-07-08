@@ -9,6 +9,8 @@ import androidx.databinding.ViewDataBinding
 import com.base.mvvm.core.base.mvvm.MVVMFragment
 
 /**
+ * Author: William Giang Nguyen | 8/7/2022
+ *
  * Use for tab screen, webView, google map...
  */
 abstract class SaveViewBaseFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes id: Int) :

@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.navigation.NavController
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 interface BaseNavigator {
     fun openScreen(
         @IdRes id: Int,

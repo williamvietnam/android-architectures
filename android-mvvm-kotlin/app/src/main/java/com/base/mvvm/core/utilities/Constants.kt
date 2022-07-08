@@ -1,5 +1,8 @@
 package com.base.mvvm.core.utilities
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 object Constants {
     const val PREF_FILE_NAME = "Preferences"
     const val DEFAULT_TIMEOUT = 30

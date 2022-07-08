@@ -12,6 +12,9 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
 import androidx.core.text.PrecomputedTextCompat
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @ColorInt
 fun Context.getColorCompat(@ColorRes resourceId: Int) = ContextCompat.getColor(this, resourceId)
 

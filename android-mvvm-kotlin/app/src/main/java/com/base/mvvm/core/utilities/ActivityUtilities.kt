@@ -8,6 +8,9 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.view.WindowManager
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 fun Activity.turnScreenOnAndKeyguardOff() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
         setShowWhenLocked(true)

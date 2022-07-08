@@ -4,6 +4,9 @@ import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 fun String.toDate(format: String): Date? {
     val dateFormatter = SimpleDateFormat(format, Locale.US)
     return try {

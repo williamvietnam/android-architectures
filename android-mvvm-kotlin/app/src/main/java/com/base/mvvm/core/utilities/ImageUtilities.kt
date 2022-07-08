@@ -9,6 +9,9 @@ import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 fun ImageView.loadImage(resDrawable: Int) {
     Glide.with(this)
         .load(resDrawable)
@@ -114,33 +117,6 @@ fun getPathFromInputStreamUri(
     return filePath
 }
 
-//fun getRealPathFromURI(
-//    mContext: Context,
-//    contentURI: Uri?
-//): String? {
-//    var result: String? = null
-//    var cursor: Cursor? = null
-//    try {
-//        val proj = arrayOf(MediaStore.Video.Media.DATA)
-//        val mContentResolver = mContext.contentResolver
-//        val mime = mContentResolver.getType(contentURI!!)
-//        cursor = mContentResolver.query(contentURI, proj, null, null, null)
-//        if (cursor == null) {
-//            return null
-//        } else {
-//            cursor.moveToFirst()
-//            val columnIndex = cursor.getColumnIndex(MediaStore.Images.Media.DATA)
-//            if (columnIndex > -1) result = cursor.getString(columnIndex)
-//            cursor.close()
-//        }
-//    } catch (e: Exception) {
-//        return null
-//    } finally {
-//        cursor?.close()
-//    }
-//    return result
-//}
-
 fun createTemporalFileFrom(
     context: Context,
     inputStream: InputStream?
@@ -174,7 +150,7 @@ fun getRealPathFromURI(context: Context, contentUri: Uri): String? {
         null,
         null
     ) //Since manageQuery is deprecated
-    val column_index = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
+    val columnIndex = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
     cursor?.moveToFirst()
-    return cursor?.getString(column_index!!)
+    return cursor?.getString(columnIndex!!)
 }

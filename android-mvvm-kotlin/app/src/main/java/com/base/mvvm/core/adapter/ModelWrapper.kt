@@ -1,5 +1,8 @@
 package com.base.mvvm.core.adapter
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class ModelWrapper(var model: Any?, var viewType: Int) : Cloneable {
     var id = 0
     var isSelected = false

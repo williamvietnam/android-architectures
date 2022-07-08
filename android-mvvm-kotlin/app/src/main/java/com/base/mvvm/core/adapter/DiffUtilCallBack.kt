@@ -2,6 +2,9 @@ package com.base.mvvm.core.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class DiffUtilCallBack<T>(
     private val oldItems: List<ModelWrapper>,
     private val newItems: List<ModelWrapper>

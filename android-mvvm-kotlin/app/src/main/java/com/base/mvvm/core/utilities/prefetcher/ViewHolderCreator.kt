@@ -10,6 +10,10 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.consumeEach
 
+
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @ExperimentalCoroutinesApi
 internal class ViewHolderCreator(
     activity: Activity,

@@ -19,8 +19,9 @@ import java.lang.ref.WeakReference
 import kotlin.math.abs
 
 /**
+ * Author: William Giang Nguyen | 8/7/2022
+ *
  * After Lollipop use system method.
- * Created by qiu on 8/27/16.
  */
 internal object StatusBarCompatLollipop {
     /**

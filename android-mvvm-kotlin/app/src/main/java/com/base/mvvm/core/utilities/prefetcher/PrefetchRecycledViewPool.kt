@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.viewType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @ExperimentalCoroutinesApi
 class PrefetchRecycledViewPool(activity: Activity, coroutineScope: CoroutineScope) :
     RecyclerView.RecycledViewPool(),

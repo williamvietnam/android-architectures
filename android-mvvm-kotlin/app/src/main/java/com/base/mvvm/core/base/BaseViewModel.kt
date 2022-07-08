@@ -12,6 +12,9 @@ import okhttp3.ResponseBody
 import retrofit2.HttpException
 import java.net.ConnectException
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class BaseViewModel : ViewModel() {
 
     var messageError = SingleLiveEvent<Any>()

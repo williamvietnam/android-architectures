@@ -8,6 +8,9 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import timber.log.Timber
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class NetworkInterceptor : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {

@@ -7,6 +7,9 @@ import androidx.databinding.ViewDataBinding
 import com.base.mvvm.core.base.BaseMVVMFragment
 import com.base.mvvm.core.base.BaseViewModel
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 abstract class MVVMFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes id: Int) :
     BaseMVVMFragment<BD>(id) {
 

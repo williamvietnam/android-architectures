@@ -7,10 +7,11 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
-private const val PREF_PARAM_USER_INFO = "PREF_PARAM_USER_INFO"
-
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 @Singleton
-class AppPreferences @Inject constructor(
+class PreferencesImplement @Inject constructor(
     @ApplicationContext context: Context
 ) : RxPreferences {
 
@@ -50,3 +51,5 @@ class AppPreferences @Inject constructor(
     }
 
 }
+
+private const val PREF_PARAM_USER_INFO = "PREF_PARAM_USER_INFO"

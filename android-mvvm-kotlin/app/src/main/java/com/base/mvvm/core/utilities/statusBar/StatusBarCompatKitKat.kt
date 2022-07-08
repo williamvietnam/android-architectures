@@ -12,8 +12,9 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import kotlin.math.abs
 
 /**
+ * Author: William Giang Nguyen | 8/7/2022
+ *
  * After kitkat add fake status bar
- * Created by qiu on 8/27/16.
  */
 internal object StatusBarCompatKitKat {
     private const val TAG_FAKE_STATUS_BAR_VIEW = "statusBarView"

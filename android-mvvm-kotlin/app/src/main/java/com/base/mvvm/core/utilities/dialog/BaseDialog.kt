@@ -7,6 +7,9 @@ import android.widget.TextView
 import androidx.annotation.StringRes
 import com.base.mvvm.R
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class BaseDialog {
     private lateinit var dialog: AlertDialog
     private var builder: AlertDialog.Builder

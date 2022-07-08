@@ -13,6 +13,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.base.mvvm.R
 import com.base.mvvm.core.utilities.DeviceUtilities
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 class ToolBarCommon : Toolbar {
     lateinit var btnLeft: ImageView
     lateinit var btnRight: TextView

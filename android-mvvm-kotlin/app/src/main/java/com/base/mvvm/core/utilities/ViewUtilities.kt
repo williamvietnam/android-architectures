@@ -22,6 +22,9 @@ import com.base.mvvm.R
 import com.base.mvvm.core.utilities.Constants.DURATION_TIME_CLICKABLE
 import com.base.mvvm.core.utilities.ViewUtils.lastClick
 
+/**
+ * Author: William Giang Nguyen | 8/7/2022
+ * */
 object ViewUtils {
     //check double click
     @kotlin.jvm.JvmStatic
@@ -114,13 +117,6 @@ fun ViewPager.onPageSelected(params: (Int) -> Unit) {
 fun View.setOnClickAction(listener: View.OnClickListener) {
 
 }
-
-/*fun TextView.setTextAsync(data: String) {
-    TextViewCompat.setPrecomputedText(
-        this,
-        PrecomputedTextCompat.create(data, TextViewCompat.getTextMetricsParams(this))
-    )
-}*/
 
 fun Activity.toastMessage(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
