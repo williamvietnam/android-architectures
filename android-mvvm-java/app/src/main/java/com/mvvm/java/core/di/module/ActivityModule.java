@@ -5,6 +5,8 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mvvm.java.core.di.ActivityContext;
+import com.mvvm.java.core.utilities.rx.SchedulerProvider;
+import com.mvvm.java.core.utilities.rx.SchedulerProviderImpl;
 
 import dagger.Module;
 import dagger.Provides;
@@ -35,9 +37,9 @@ public class ActivityModule {
         return new CompositeDisposable();
     }
 
-//    @Provides
-//    SchedulerProvider provideSchedulerProvider() {
-//        return new SchedulerProviderImpl();
-//    }
+    @Provides
+    SchedulerProvider provideSchedulerProvider() {
+        return new SchedulerProviderImpl();
+    }
 
 }
