@@ -1,4 +1,0 @@
-package com.mvvm.java.core.utils;
-
-public class Utils {
-}
