@@ -1,0 +1,1 @@
+MVP version2 have dependency injection with dagger2
