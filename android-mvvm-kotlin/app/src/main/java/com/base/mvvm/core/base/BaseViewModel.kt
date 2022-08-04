@@ -3,8 +3,8 @@ package com.base.mvvm.core.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.base.mvvm.R
-import com.base.mvvm.core.data.network.BaseResponse
-import com.base.mvvm.core.data.network.ErrorResponse
+import com.base.mvvm.core.data.network.models.responses.BaseResponse
+import com.base.mvvm.core.data.network.models.responses.ErrorResponse
 import com.base.mvvm.core.utilities.SingleLiveEvent
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
