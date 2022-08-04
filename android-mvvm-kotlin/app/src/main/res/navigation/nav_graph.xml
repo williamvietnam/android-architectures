@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.base.mvvm.samples.ui.home.HomeSampleFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home_sample">
+
+        <action
+            android:id="@+id/actionHomeToBanner"
+            app:destination="@id/bannerDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bannerDetailFragment"
+        android:name="com.base.mvvm.samples.ui.home.banner.BannerDetailFragment"
+        android:label="banner detail"
+        tools:layout="@layout/fragment_banner_detail" />
+
+    <fragment
+        android:id="@+id/authorFragment"
+        android:name="com.base.mvvm.samples.ui.author.AuthorSampleFragment"
+        android:label="@string/author"
+        tools:layout="@layout/fragment_author_sample" />
 
 </navigation>
