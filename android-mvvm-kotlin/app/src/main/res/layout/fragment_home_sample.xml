@@ -35,8 +35,8 @@
                 android:id="@+id/viewPagerBanner"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_256sdp"
+                android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/_80sdp" />
-
 
 
         </LinearLayout>

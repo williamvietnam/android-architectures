@@ -5,6 +5,10 @@ import com.google.gson.annotations.SerializedName
 
 data class Banner(
 
+    @SerializedName("bannerId")
+    @Expose
+    val bannerId: Int,
+
     @SerializedName("image")
     @Expose
     val image: String,
