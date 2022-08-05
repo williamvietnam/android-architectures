@@ -9,6 +9,7 @@ import com.base.mvvm.R
 import com.base.mvvm.core.base.mvvm.MVVMFragment
 import com.base.mvvm.databinding.FragmentHomeSampleBinding
 import com.base.mvvm.samples.models.Banner
+import com.base.mvvm.samples.models.Story
 import com.base.mvvm.samples.ui.home.adapters.BannerAdapter
 
 class HomeSampleFragment : MVVMFragment<
@@ -22,6 +23,7 @@ class HomeSampleFragment : MVVMFragment<
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
         setupToolbar()
+
         setupSlideBanner(viewModel.getListBanners())
     }
 
@@ -31,8 +33,12 @@ class HomeSampleFragment : MVVMFragment<
         binding.toolbar.setSrcLeft(R.drawable.ic_exit)
     }
 
-    private fun setupSlideBanner(banners: List<Banner>) {
-        if (banners.isNotEmpty()) {
+    private fun setupStories(stories: List<Story>) {
+
+    }
+
+    private fun setupSlideBanner(banners: List<Banner>?) {
+        if (banners != null && banners.isNotEmpty()) {
             binding.viewPagerBanner.visibility = View.VISIBLE
             binding.viewPagerBanner.adapter = BannerAdapter(banners = banners, this)
             binding.viewPagerBanner.orientation = ViewPager2.ORIENTATION_HORIZONTAL

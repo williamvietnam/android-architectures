@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndroidMVP</string>
+    <string name="app_name">Android Sample</string>
+    <string name="home">Home</string>
+    <string name="author">Author</string>
 </resources>
