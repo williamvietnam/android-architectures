@@ -7,15 +7,13 @@ import androidx.navigation.ui.setupWithNavController
 import com.base.mvvm.R
 import com.base.mvvm.core.base.mvvm.MVVMActivity
 import com.base.mvvm.databinding.ActivityMainSampleBinding
-import com.base.mvvm.samples.navigation.SampleNavigator
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainSampleActivity : MVVMActivity<ActivityMainSampleBinding, MainSampleViewModel>() {
 
-    @Inject
-    lateinit var appNavigation: SampleNavigator
+//    @Inject
+//    lateinit var appNavigation: SampleNavigator
 
     private val viewModel: MainSampleViewModel by viewModels()
 
@@ -29,10 +27,12 @@ class MainSampleActivity : MVVMActivity<ActivityMainSampleBinding, MainSampleVie
 
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.fragmentContainerView
-        ) as NavHostFragment
+        ) as NavHostFragment?
 
-        appNavigation.bind(navHostFragment.navController)
-        val navController = navHostFragment.navController
-        binding.bottomNav.setupWithNavController(navController)
+//        appNavigation.bind(navHostFragment.navController)
+        val navController = navHostFragment?.navController
+        if (navController != null) {
+            binding.bottomNav.setupWithNavController(navController)
+        }
     }
 }
