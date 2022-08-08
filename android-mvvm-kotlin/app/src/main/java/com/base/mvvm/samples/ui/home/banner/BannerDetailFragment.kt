@@ -4,16 +4,15 @@ import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.viewModels
 import com.base.mvvm.R
-import com.base.mvvm.core.base.mvvm.MVVMFragment
+import com.base.mvvm.core.base.BaseFragmentViewModel
 import com.base.mvvm.databinding.FragmentBannerDetailBinding
 import com.base.mvvm.samples.navigation.SampleNavigator
-import com.base.mvvm.samples.navigation.SampleNavigatorImpl
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class BannerDetailFragment :
-    MVVMFragment<FragmentBannerDetailBinding, BannerDetailViewModel>(R.layout.fragment_banner_detail) {
+    BaseFragmentViewModel<FragmentBannerDetailBinding, BannerDetailViewModel>(R.layout.fragment_banner_detail) {
 
     @Inject
     lateinit var navigation: SampleNavigator

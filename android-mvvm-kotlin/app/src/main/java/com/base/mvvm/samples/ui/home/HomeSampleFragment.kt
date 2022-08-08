@@ -6,7 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.base.mvvm.R
-import com.base.mvvm.core.base.mvvm.MVVMFragment
+import com.base.mvvm.core.base.BaseFragmentViewModel
 import com.base.mvvm.databinding.FragmentHomeSampleBinding
 import com.base.mvvm.samples.models.Banner
 import com.base.mvvm.samples.models.Story
@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class HomeSampleFragment : MVVMFragment<
+class HomeSampleFragment : BaseFragmentViewModel<
         FragmentHomeSampleBinding,
         HomeSampleViewModel>(R.layout.fragment_home_sample), HomeView, BannerAdapter.CallBack {
 

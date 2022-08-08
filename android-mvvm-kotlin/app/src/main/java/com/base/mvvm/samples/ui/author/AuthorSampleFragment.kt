@@ -3,7 +3,7 @@ package com.base.mvvm.samples.ui.author
 import android.os.Bundle
 import androidx.fragment.app.viewModels
 import com.base.mvvm.R
-import com.base.mvvm.core.base.mvvm.MVVMFragment
+import com.base.mvvm.core.base.BaseFragmentViewModel
 import com.base.mvvm.databinding.FragmentAuthorSampleBinding
 import com.base.mvvm.samples.navigation.SampleNavigator
 import dagger.hilt.android.AndroidEntryPoint
@@ -11,7 +11,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class AuthorSampleFragment : MVVMFragment<
+class AuthorSampleFragment : BaseFragmentViewModel<
         FragmentAuthorSampleBinding,
         AuthorSampleViewModel>(R.layout.fragment_author_sample), AuthorSampleView {
 
