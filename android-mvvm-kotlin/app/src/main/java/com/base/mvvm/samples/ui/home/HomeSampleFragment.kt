@@ -10,11 +10,18 @@ import com.base.mvvm.core.base.mvvm.MVVMFragment
 import com.base.mvvm.databinding.FragmentHomeSampleBinding
 import com.base.mvvm.samples.models.Banner
 import com.base.mvvm.samples.models.Story
+import com.base.mvvm.samples.navigation.SampleNavigator
 import com.base.mvvm.samples.ui.home.adapters.BannerAdapter
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class HomeSampleFragment : MVVMFragment<
         FragmentHomeSampleBinding,
         HomeSampleViewModel>(R.layout.fragment_home_sample), HomeView, BannerAdapter.CallBack {
+
+    @Inject
+    lateinit var navigation: SampleNavigator
 
     private val viewModel: HomeSampleViewModel by viewModels()
 

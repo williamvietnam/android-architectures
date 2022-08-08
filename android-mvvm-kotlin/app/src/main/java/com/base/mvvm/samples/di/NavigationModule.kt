@@ -18,6 +18,6 @@ abstract class NavigationModule {
 
     @Binds
     @ActivityScoped
-    abstract fun provideAppNavigation(navigation: SampleNavigatorImpl): SampleNavigator
+    abstract fun provideSampleNavigator(navigation: SampleNavigatorImpl): SampleNavigator
 
 }

@@ -3,9 +3,12 @@ package com.base.mvvm.samples.ui.home
 import com.base.mvvm.core.base.BaseViewModel
 import com.base.mvvm.samples.models.Banner
 import com.base.mvvm.samples.models.Story
+import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
+import javax.inject.Inject
 
-class HomeSampleViewModel : BaseViewModel() {
+@HiltViewModel
+class HomeSampleViewModel @Inject constructor() : BaseViewModel() {
 
     init {
         Timber.tag("HomeSampleViewModel")
