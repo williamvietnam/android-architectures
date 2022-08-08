@@ -22,7 +22,7 @@ import java.lang.ref.WeakReference
 abstract class BaseMVVMActivity<BD : ViewDataBinding> : AppCompatActivity() {
 
     private var _binding: BD? = null
-    protected val binding: BD get() = _binding!!
+    val binding: BD get() = _binding!!
 
     @get: LayoutRes
     abstract val layoutId: Int

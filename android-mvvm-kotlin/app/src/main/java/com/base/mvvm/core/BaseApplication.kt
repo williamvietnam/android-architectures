@@ -1,9 +1,12 @@
 package com.base.mvvm.core
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
+import javax.inject.Inject
 
-abstract class BaseApplication : Application() {
+@HiltAndroidApp
+class BaseApplication @Inject constructor() : Application() {
 
     override fun onCreate() {
         super.onCreate()
