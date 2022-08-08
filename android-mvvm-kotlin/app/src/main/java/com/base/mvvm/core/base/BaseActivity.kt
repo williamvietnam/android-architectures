@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference
 /**
  * Author: William Giang Nguyen | 8/7/2022
  * */
-abstract class BaseMVVMActivity<BD : ViewDataBinding> : AppCompatActivity() {
+abstract class BaseActivity<BD : ViewDataBinding> : AppCompatActivity() {
 
     private var _binding: BD? = null
     val binding: BD get() = _binding!!

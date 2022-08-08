@@ -13,8 +13,9 @@ import com.base.mvvm.core.utilities.dialog.BaseDialog
 /**
  * Author: William Giang Nguyen | 8/7/2022
  * */
-abstract class BaseMVVMFragment<BD : ViewDataBinding>(@LayoutRes id: Int) :
-    Fragment(id) {
+abstract class BaseFragment<BD : ViewDataBinding>(
+    @LayoutRes id: Int
+) : Fragment(id) {
 
     private var _binding: BD? = null
     protected val binding: BD
@@ -74,11 +75,11 @@ abstract class BaseMVVMFragment<BD : ViewDataBinding>(@LayoutRes id: Int) :
 
 
     fun showHideLoading(isShow: Boolean) {
-        if (activity != null && activity is BaseMVVMActivity<*>) {
+        if (activity != null && activity is BaseActivity<*>) {
             if (isShow) {
-                (activity as BaseMVVMActivity<*>?)!!.showLoading()
+                (activity as BaseActivity<*>?)!!.showLoading()
             } else {
-                (activity as BaseMVVMActivity<*>?)!!.hiddenLoading()
+                (activity as BaseActivity<*>?)!!.hiddenLoading()
             }
         }
     }

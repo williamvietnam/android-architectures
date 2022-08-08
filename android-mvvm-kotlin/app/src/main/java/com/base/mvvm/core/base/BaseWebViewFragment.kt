@@ -9,8 +9,11 @@ import androidx.databinding.ViewDataBinding
 /**
  * Author: William Giang Nguyen | 8/7/2022
  * */
-abstract class BaseWebViewFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes id: Int) :
-    SaveViewBaseFragment<BD, VM>(id) {
+abstract class BaseWebViewFragment<
+        BD : ViewDataBinding,
+        VM : BaseViewModel>(
+    @LayoutRes id: Int
+) : SaveViewBaseFragment<BD, VM>(id) {
 
     fun WebView.loadData(url: String) {
         webViewClient = object : WebViewClient() {

@@ -1,4 +1,7 @@
 package com.base.mvvm.samples.ui.register
 
-class RegisterViewModel {
+import com.base.mvvm.core.base.BaseViewModel
+import javax.inject.Inject
+
+class RegisterViewModel @Inject constructor(): BaseViewModel() {
 }

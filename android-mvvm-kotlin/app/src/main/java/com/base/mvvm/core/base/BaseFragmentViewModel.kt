@@ -1,17 +1,18 @@
-package com.base.mvvm.core.base.mvvm
+package com.base.mvvm.core.base
 
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
-import com.base.mvvm.core.base.BaseMVVMFragment
-import com.base.mvvm.core.base.BaseViewModel
 
 /**
  * Author: William Giang Nguyen | 8/7/2022
  * */
-abstract class MVVMFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes id: Int) :
-    BaseMVVMFragment<BD>(id) {
+abstract class BaseFragmentViewModel<
+        BD : ViewDataBinding,
+        VM : BaseViewModel>(
+    @LayoutRes id: Int
+) : BaseFragment<BD>(id) {
 
     private lateinit var viewModel: VM
 
@@ -24,7 +25,6 @@ abstract class MVVMFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes
 
     override fun initView(savedInstanceState: Bundle?) {
         with(viewModel) {
-
             messageError.observe(viewLifecycleOwner) {
                 var message = ""
                 if (it is String) {
@@ -42,14 +42,9 @@ abstract class MVVMFragment<BD : ViewDataBinding, VM : BaseViewModel>(@LayoutRes
                     showAlertDialog(message)
                 }
             }
-
             isLoading.observe(viewLifecycleOwner) {
                 showHideLoading(it)
             }
-
         }
-
-
     }
-
 }
