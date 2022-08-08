@@ -27,6 +27,7 @@ class SplashFragment : MVVMFragment<
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
+
         Timber.tag("Debug: Splash onCreated")
     }
 }
