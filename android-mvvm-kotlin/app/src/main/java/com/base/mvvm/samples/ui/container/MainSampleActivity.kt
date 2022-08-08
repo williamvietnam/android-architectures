@@ -27,9 +27,8 @@ class MainSampleActivity : MVVMActivity<ActivityMainSampleBinding, MainSampleVie
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(
-            R.id.fragmentContainerView
-        ) as NavHostFragment
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
 
         appNavigation.bind(navHostFragment.navController)
         val navController = navHostFragment.navController
