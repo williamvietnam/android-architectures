@@ -150,4 +150,6 @@
     <string name="information">information</string>
     <string name="logout_confirm">Logout confirm</string>
     <string name="no">No</string>
+    <string name="author">Author</string>
+    <string name="splash_image">splashImage</string>
 </resources>

@@ -7,14 +7,39 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".core.BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_cat"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_cat"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat"
-        tools:targetApi="31" />
+        android:theme="@style/Platform.MaterialComponents"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".samples.ui.splash.SplashSampleActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".samples.ui.login.LoginActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".samples.ui.register.RegisterActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".samples.ui.container.MainSampleActivity"
+            android:screenOrientation="fullSensor" />
+
+    </application>
 
 </manifest>

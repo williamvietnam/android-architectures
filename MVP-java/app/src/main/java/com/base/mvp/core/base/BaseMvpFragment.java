@@ -21,6 +21,8 @@ import com.base.mvp.core.custom.CustomDialog;
 import com.base.mvp.core.utilities.Constants;
 import com.base.mvp.core.utilities.Utilities;
 
+import timber.log.Timber;
+
 /**
  * Author: William Giang Nguyen | 25/06/2022
  */
@@ -62,11 +64,11 @@ public abstract class BaseMvpFragment<VB extends ViewBinding>
             synchronized (BaseMvpFragment.this) {
                 isLoading = true;
                 progressDialog = CustomDialog.showLoadingDialog(getContext());
-                Log.d(Constants.TAG_MVP_FRAGMENT, "showLoadingDialog");
+                Timber.tag(Constants.TAG_MVP_FRAGMENT).d("showLoadingDialog");
                 new Handler(Looper.getMainLooper()).post(() -> progressDialog.show());
             }
         } else {
-            Log.d(Constants.TAG_MVP_FRAGMENT, "#showLoading() context maybe null");
+            Timber.tag(Constants.TAG_MVP_FRAGMENT).d("#showLoading() context maybe null");
         }
     }
 
@@ -84,7 +86,7 @@ public abstract class BaseMvpFragment<VB extends ViewBinding>
                 }
             } catch (Exception exception) {
                 // something occurs error when dismiss dialog
-                Log.d(Constants.TAG_MVP_FRAGMENT, exception.getMessage());
+                Timber.tag(Constants.TAG_MVP_FRAGMENT).d(exception);
             }
         }
     }

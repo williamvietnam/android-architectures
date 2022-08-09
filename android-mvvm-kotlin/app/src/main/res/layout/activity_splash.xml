@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".samples.ui.splash.SplashSampleActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.base.mvvm.samples.ui.splash.SplashViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_256sdp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_28sdp"
+            android:layout_marginVertical="@dimen/_24sdp"
+            android:contentDescription="@string/splash_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_cat"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="splash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_32sdp"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="ToolbarCustomView">
+
+    </declare-styleable>
+
     <declare-styleable name="ToolBarCommon">
         <attr name="src_left" format="reference" />
         <attr name="trans_status_bar" format="boolean" />

@@ -1,5 +1,6 @@
 package com.base.mvvm.core.data.network
 
+import com.base.mvvm.core.data.network.models.ApiUser
 import retrofit2.http.GET
 
 /**

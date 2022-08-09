@@ -48,8 +48,20 @@ class PreferencesImplement @Inject constructor(
 
     override fun logout() {
         remove(PREF_PARAM_USER_INFO)
+        remove(PREF_KEY_IS_FIRST_LOGIN)
+        clear()
+    }
+
+    override fun isLogin(): Boolean {
+        return mPrefs.getBoolean(PREF_KEY_IS_FIRST_LOGIN, false)
+    }
+
+    override fun setLogin(isLogin: Boolean) {
+        mPrefs.edit().putBoolean(PREF_KEY_IS_FIRST_LOGIN, isLogin).apply()
     }
 
 }
 
 private const val PREF_PARAM_USER_INFO = "PREF_PARAM_USER_INFO"
+
+private const val PREF_KEY_IS_FIRST_LOGIN = "PREF_KEY_IS_FIRST_LOGIN"
