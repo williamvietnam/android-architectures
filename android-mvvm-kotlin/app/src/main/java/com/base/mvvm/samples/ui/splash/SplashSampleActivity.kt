@@ -12,27 +12,24 @@ import com.base.mvvm.samples.ui.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SplashSampleActivity() : BaseActivityViewModel<ActivitySplashBinding, SplashViewModel>() {
+class SplashSampleActivity : BaseActivityViewModel<ActivitySplashBinding, SplashViewModel>() {
 
     private val viewModel: SplashViewModel by viewModels()
+
+    private val handler = Handler(Looper.getMainLooper())
+    private var runnable: Runnable = Runnable {
+        decideNextScreen(viewModel.decideNextScreen())
+    }
 
     override fun getVM(): SplashViewModel = viewModel
 
     override val layoutId: Int
         get() = R.layout.activity_splash
 
+
     override fun onResume() {
         super.onResume()
-        Handler(Looper.getMainLooper()).postDelayed({
-            Runnable {
-                decideNextScreen(viewModel.decideNextScreen())
-            }
-        }, 2000)
-    }
-
-    override fun onDestroy() {
-        finish()
-        super.onDestroy()
+        handler.postDelayed(runnable, 1200)
     }
 
     private fun decideNextScreen(screen: String) {
@@ -45,11 +42,13 @@ class SplashSampleActivity() : BaseActivityViewModel<ActivitySplashBinding, Spla
     private fun openLoginScreen() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     private fun openMainScreen() {
         val intent = Intent(this, MainSampleActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     companion object {
