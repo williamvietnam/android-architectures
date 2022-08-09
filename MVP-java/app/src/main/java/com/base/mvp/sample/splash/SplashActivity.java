@@ -6,7 +6,11 @@ import com.base.mvp.core.base.MVP_v2.MvpActivityDI;
 import com.base.mvp.databinding.ActivitySplashBinding;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashActivity extends MvpActivityDI<ActivitySplashBinding, SplashContract.View, SplashContract.Presenter<SplashContract.View>> {
+public class SplashActivity extends MvpActivityDI<
+        ActivitySplashBinding,
+        SplashContract.View,
+        SplashContract.Presenter<SplashContract.View>>
+        implements SplashContract.View {
 
     @Override
     public ActivitySplashBinding getViewBinding() {
