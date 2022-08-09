@@ -46,7 +46,6 @@ public interface SchedulerProvider {
 
     /**
      * Cách này cho phép tạo ra một Scheduler từ một Executor bởi giới hạn số lượng các thread được tạo ra. Khi thread pool bị full, các nhiệm vụ sẽ xếp hàng đợi.
-     *
      * Chúng ta đã có những khái niệm cơ bản cần thiết. Giờ hãy bắt đầu với một số khái niệm chính về RxJava mà mọi người nên biết.
      * */
     Scheduler from(Executor executor);
