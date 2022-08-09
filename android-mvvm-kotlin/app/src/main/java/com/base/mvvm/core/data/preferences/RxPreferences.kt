@@ -21,4 +21,7 @@ interface RxPreferences {
 
     fun logout()
 
+    fun isLogin(): Boolean
+
+    fun setLogin(isLogin: Boolean)
 }
