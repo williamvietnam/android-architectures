@@ -32,6 +32,6 @@ public abstract class MvpFragmentPresenter<
             presenter = getPresenter();
         }
         getLifecycle().addObserver(presenter);
-        presenter.attachView((V) this);
+        presenter.onAttachView((V) this);
     }
 }

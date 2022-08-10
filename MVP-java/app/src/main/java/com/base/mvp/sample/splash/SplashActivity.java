@@ -1,6 +1,9 @@
 package com.base.mvp.sample.splash;
 
 import android.annotation.SuppressLint;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 
 import com.base.mvp.core.base.MVP_v2.MvpActivityDI;
 import com.base.mvp.databinding.ActivitySplashBinding;
@@ -11,6 +14,15 @@ public class SplashActivity extends MvpActivityDI<
         SplashContract.View,
         SplashContract.Presenter<SplashContract.View>>
         implements SplashContract.View {
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getActivityComponent() != null) {
+            getActivityComponent().inject(this);
+            presenter.onAttachView(this);
+        }
+    }
 
     @Override
     public ActivitySplashBinding getViewBinding() {

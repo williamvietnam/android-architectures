@@ -29,7 +29,7 @@ public abstract class MvpActivityPresenter<
             presenter = getPresenter();
         }
         getLifecycle().addObserver(presenter);
-        presenter.attachView((V) this);
+        presenter.onAttachView((V) this);
         super.onCreate(savedInstanceState);
     }
 }

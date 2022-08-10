@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewbinding.ViewBinding;
 
@@ -96,6 +97,20 @@ public abstract class BaseMvpActivity<VB extends ViewBinding>
         if (view != null) {
             inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
+    }
+
+    @Override
+    public void onError(String message) {
+        if (message != null) {
+//            showSnackBar(message);
+        } else {
+//            showSnackBar(getString(R.string.some_error));
+        }
+    }
+
+    @Override
+    public void onError(@StringRes int resId) {
+        onError(getString(resId));
     }
 
     private void unregisterNetworkChanges() {

@@ -5,13 +5,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -118,5 +118,15 @@ public abstract class BaseMvpFragment<VB extends ViewBinding>
         if (activity != null) {
             activity.hideKeyboard();
         }
+    }
+
+    @Override
+    public void onError(String message) {
+        activity.onError(message);
+    }
+
+    @Override
+    public void onError(@StringRes int resId) {
+        activity.onError(resId);
     }
 }
