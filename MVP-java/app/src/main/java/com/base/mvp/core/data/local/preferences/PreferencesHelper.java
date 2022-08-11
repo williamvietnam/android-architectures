@@ -2,6 +2,14 @@ package com.base.mvp.core.data.local.preferences;
 
 public interface PreferencesHelper {
 
+    Long getCurrentUserId();
+
+    void setCurrentUserId(Long userId);
+
+    String getAccessToken();
+
+    void setAccessToken(String accessToken);
+
     /**
      * @return is showed welcome screen or not
      */

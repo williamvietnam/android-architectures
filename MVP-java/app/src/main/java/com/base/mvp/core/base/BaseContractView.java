@@ -20,4 +20,8 @@ public interface BaseContractView {
     boolean isNetworkConnected();
 
     void hideKeyboard();
+
+    void onError(String message);
+
+    void onError(@StringRes int resId);
 }
