@@ -152,4 +152,7 @@
     <string name="no">No</string>
     <string name="author">Author</string>
     <string name="splash_image">splashImage</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>

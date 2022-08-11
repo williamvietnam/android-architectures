@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".samples.ui.login.LoginActivity">
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.base.mvvm.samples.ui.login.LoginViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_56sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/login"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_48sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/input_edt"
+            android:hint="@string/username"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@={}"
+            android:textColorHint="@color/actionbar_title_color"
+            android:textSize="@dimen/_14ssp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/input_edt"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@={}"
+            android:textColorHint="@color/actionbar_title_color"
+            android:textSize="@dimen/_14ssp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/login" />
+
+    </LinearLayout>
 </layout>

@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/drawable/ic_cat.xml" value="0.214" />
         <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/drawable/ic_genius_brains.xml" value="0.214" />
+        <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/drawable/input_edt.xml" value="0.26" />
+        <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/layout/activity_main_sample.xml" value="0.2421875" />
         <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/MyGithub/android-architectures/android-mvvm-kotlin/app/src/main/res/layout/fragment_author_sample.xml" value="0.3546875" />

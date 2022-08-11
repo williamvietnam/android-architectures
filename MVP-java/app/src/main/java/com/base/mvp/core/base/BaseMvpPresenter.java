@@ -1,7 +1,5 @@
 package com.base.mvp.core.base;
 
-import android.util.Log;
-
 import com.androidnetworking.common.ANConstants;
 import com.androidnetworking.error.ANError;
 import com.base.mvp.R;
@@ -27,17 +25,16 @@ public abstract class BaseMvpPresenter<V extends BaseContractView> implements Ba
     private static final String TAG = "BaseMvpPresenter";
     private final DataManager dataManager;
     private final SchedulerProvider schedulerProvider;
-    private final CompositeDisposable compositeDisposable;
+    private CompositeDisposable compositeDisposable;
 
     private V view;
 
-    @Inject
     public BaseMvpPresenter(DataManager dataManager,
                             SchedulerProvider schedulerProvider,
                             CompositeDisposable compositeDisposable) {
         this.dataManager = dataManager;
         this.schedulerProvider = schedulerProvider;
-        this.compositeDisposable = compositeDisposable;
+//        this.compositeDisposable = compositeDisposable;
     }
 
     @Override

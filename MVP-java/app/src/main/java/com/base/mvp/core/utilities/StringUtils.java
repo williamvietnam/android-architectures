@@ -1,27 +1,8 @@
 package com.base.mvp.core.utilities;
 
-import static com.viettel.yttm.mvp.utils.AppConstants.ACCEPTED;
-import static com.viettel.yttm.mvp.utils.AppConstants.CANCELED;
-import static com.viettel.yttm.mvp.utils.AppConstants.FAILED;
-import static com.viettel.yttm.mvp.utils.AppConstants.FINISHED;
-import static com.viettel.yttm.mvp.utils.AppConstants.ONGOING;
-import static com.viettel.yttm.mvp.utils.AppConstants.ROLE_DOCTOR;
-import static com.viettel.yttm.mvp.utils.AppConstants.ROLE_NURSE;
-import static com.viettel.yttm.mvp.utils.AppConstants.SUCCESS;
-import static com.viettel.yttm.mvp.utils.AppConstants.WAITING_DOCTOR_CONFIRM;
-import static com.viettel.yttm.mvp.utils.AppConstants.WAITING_PATIENT_CONFIRM;
-import static com.viettel.yttm.mvp.utils.Constant.THA_GOOD;
-import static com.viettel.yttm.mvp.utils.Constant.THA_LOW;
-import static com.viettel.yttm.mvp.utils.Constant.THA_LV1;
-import static com.viettel.yttm.mvp.utils.Constant.THA_LV2;
-import static com.viettel.yttm.mvp.utils.Constant.THA_LV3;
-import static com.viettel.yttm.mvp.utils.Constant.THA_PRE;
-
 import android.annotation.SuppressLint;
 import android.text.TextUtils;
 import android.widget.TextView;
-
-import com.viettel.yttm.mvp.R;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -117,22 +98,6 @@ public class StringUtils {
 
     }
 
-    public static String nameDoctor(String role, String name) {
-        if (role != null) {
-            switch (role) {
-                case ROLE_DOCTOR:
-                    return "BS " + name;
-                case ROLE_NURSE:
-                    return "ĐD " + name;
-                default:
-                    return name;
-            }
-        } else {
-            return name;
-        }
-
-    }
-
     public static String isNameCallServiceId(Integer idCallService) {
         switch (idCallService) {
             case AppConstants.CALL_DIRECT:
@@ -180,33 +145,6 @@ public class StringUtils {
         return title;
     }
 
-    public static String doctorNameWithTitle(String academic, String degree, String qualification, String nameDoctor) {
-        return handleDoctorTitle(academic, degree, qualification) + " " + nameDoctor;
-    }
-
-    public static String convertAcademic(String academic) {
-        if ("Giáo sư".equals(academic) || "GS".equals(academic)) {
-            return "GS.";
-        }
-        if ("Không".equals(academic)) {
-            return "";
-        }
-        if ("Phó giáo sư".equals(academic) || "PGS".equals(academic)) {
-            return "PGS.";
-        }
-        return "";
-    }
-
-    public static String convertDegree(String academic) {
-        if ("Thạc sĩ".equals(academic) || "ThS".equals(academic)) {
-            return "ThS.";
-        }
-        if ("Tiến sĩ".equals(academic) || "TS".equals(academic)) {
-            return "TS.";
-        }
-        return "";
-    }
-
     public static DecimalFormat format = new DecimalFormat("#.##");
 
     public static String formatDouble(double input) {
@@ -230,56 +168,6 @@ public class StringUtils {
         return "0.0";
     }
 
-    public static int setCategory(String category) {
-        switch (category) {
-            case THA_LOW:
-                return R.string.string_low;
-            case THA_GOOD:
-                return R.string.string_good;
-            case THA_PRE:
-                return R.string.string_tien_tha;
-            case THA_LV1:
-                return R.string.string_do_1;
-            case THA_LV2:
-                return R.string.string_do_2;
-            case THA_LV3:
-                return R.string.string_do_3;
-        }
-        return 0;
-    }
-
-    public static int setColorCategory(String category) {
-        switch (category) {
-            case THA_LOW:
-                return R.color.color_low;
-            case THA_GOOD:
-                return R.color.color_good;
-            case THA_PRE:
-                return R.color.color_tien_tha;
-            case THA_LV1:
-                return R.color.color_do_1;
-            case THA_LV2:
-                return R.color.color_do_2;
-            case THA_LV3:
-                return R.color.color_do_3;
-        }
-        return 0;
-    }
-
-    public static String getAge(String dateOfBirth, String initFormat) {
-
-        if (StringUtils.isNullOrEmpty(dateOfBirth)) {
-            return "";
-        }
-        int ageInMonth = differenceInMonths(DateUtils.convertStringToCalender(dateOfBirth, initFormat), Calendar.getInstance());
-        if (ageInMonth < 24) {
-            return ageInMonth + " tháng";
-        } else {
-            ageInMonth = differenceInDay(DateUtils.convertStringToCalender(dateOfBirth, initFormat), Calendar.getInstance());
-            return String.valueOf(ageInMonth / 365);
-        }
-
-    }
 
     public static boolean isLeapYear(int year) {
         assert year >= 1583; // not valid before this date.
@@ -341,76 +229,6 @@ public class StringUtils {
         return formatter.format(amount);
     }
 
-    public static String getStatusAppointment(String status) {
-        if (status == null) {
-            return "";
-        }
-        switch (status) {
-            case WAITING_DOCTOR_CONFIRM:
-                return "Chờ xác nhận";
-            case WAITING_PATIENT_CONFIRM:
-                return "Cần bạn xác nhận";
-            case ACCEPTED:
-                return "Đã xác nhận";
-            case ONGOING:
-                return "Đang diễn ra";
-            case CANCELED:
-                return "Hủy lịch";
-            case FAILED:
-                return "Thất bại";
-            case SUCCESS:
-                return "Thành công";
-            case FINISHED:
-                return "Chưa đánh giá";
-        }
-        return "";
-    }
-
-    public static String getStatusAppointmentDoctor(String status) {
-        if (status == null) {
-            return "";
-        }
-        switch (status) {
-            case WAITING_DOCTOR_CONFIRM:
-                return "Cần bạn xác nhận";
-            case WAITING_PATIENT_CONFIRM:
-                return "Chờ xác nhận";
-            case ACCEPTED:
-                return "Đã xác nhận";
-            case ONGOING:
-                return "Đang diễn ra";
-            case CANCELED:
-                return "Hủy lịch";
-            case FAILED:
-                return "Thất bại";
-            case SUCCESS:
-                return "Thành công";
-            case FINISHED:
-                return "Chưa đánh giá";
-        }
-        return "";
-    }
-
-    public static int getStatusColorAppointment(String status) {
-        if (status == null) {
-            return R.color.color_fc8d08;
-        }
-        switch (status) {
-            case WAITING_DOCTOR_CONFIRM:
-            case WAITING_PATIENT_CONFIRM:
-                return R.color.color_fc8d08;
-            case ACCEPTED:
-            case ONGOING:
-            case SUCCESS:
-                return R.color.color_low;
-            case FINISHED:
-            case FAILED:
-            case CANCELED:
-                return R.color.color_do_2;
-        }
-        return R.color.color_fc8d08;
-    }
-
     public static String convertStatusCallHotline(String status) {
         switch (status) {
             case "HAPPENED":
@@ -433,17 +251,6 @@ public class StringUtils {
                 return "Không nghe máy";
         }
         return "";
-    }
-
-    public static int getStatusColorHotline(String status) {
-        switch (status) {
-            case "REJECTED":
-            case "NOT_ANSWERED":
-                return R.color.color_do_2;
-            case "ANSWERED":
-                return R.color.color_low;
-        }
-        return R.color.color_fc8d08;
     }
 
     public static String convertStatusHotlineCall(String status) {
@@ -483,27 +290,6 @@ public class StringUtils {
             timeOfDay = " PM";
         }
         return hour + ":" + minute;
-    }
-
-    public static int convertHealthRecordIdResource(String type) {
-        if (StringUtils.isNullOrEmpty(type)) return R.drawable.ic_huyetap;
-        switch (type) {
-            case "BLOOD_PRESSURE":
-                return R.drawable.ic_huyetap;
-            case "BLOOD_SUGAR":
-                return R.drawable.ic_duonghuyet;
-            case "GROWTH_CHART":
-                return R.drawable.ic_bieudo;
-            case "HEALTH_RECORD":
-                return R.drawable.ic_hosokham_donthuoc;
-            case "MEDICAL_HISTORY":
-                return R.drawable.ic_tiensubenh;
-            case "VACCINATION":
-                return R.drawable.ic_sotiemchung;
-            case "HEALTH_DECLARATION":
-                return R.drawable.ic_khai_bao;
-        }
-        return R.drawable.ic_huyetap;
     }
 
     public static String convertHealthRecordName(String type) {

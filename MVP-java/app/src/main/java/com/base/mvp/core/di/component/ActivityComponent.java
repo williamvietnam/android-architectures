@@ -23,7 +23,7 @@ public interface ActivityComponent {
 
     void inject(HomeFragment fragment);
 
-    void inject(BannerDetailFragment fragment);
+//    void inject(BannerDetailFragment fragment);
 
     void inject(AuthorFragment fragment);
 }
