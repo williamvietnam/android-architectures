@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 
 import com.base.mvp.core.base.MVP_v2.MvpFragmentDI;
+import com.base.mvp.core.di.component.ActivityComponent;
 import com.base.mvp.databinding.FragmentAuthorBinding;
 
 /**
@@ -21,8 +22,9 @@ public class AuthorFragment extends MvpFragmentDI<
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getActivityComponent() != null) {
-            getActivityComponent().inject(this);
+        ActivityComponent component = getActivityComponent();
+        if (component != null) {
+            component.inject(this);
             presenter.onAttachView(this);
         }
     }

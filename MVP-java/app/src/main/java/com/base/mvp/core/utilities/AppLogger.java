@@ -4,14 +4,16 @@
 
 package com.base.mvp.core.utilities;
 
+import com.base.mvp.BuildConfig;
+
 import timber.log.Timber;
 
 public class AppLogger {
 
     public static void init() {
-//        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
 //            Timber.plant(new Timber.DebugTree());
-//        }
+        }
     }
 
     public static void d(String s, Object... objects) {
