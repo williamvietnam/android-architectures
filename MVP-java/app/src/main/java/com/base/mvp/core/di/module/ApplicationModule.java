@@ -19,7 +19,7 @@ import com.base.mvp.core.di.ApiInfo;
 import com.base.mvp.core.di.ApplicationContext;
 
 import javax.inject.Singleton;
-import com.base.mvp.R;
+
 import com.base.mvp.core.di.DatabaseInfo;
 import com.base.mvp.core.di.PreferenceInfo;
 import com.base.mvp.core.utilities.AppConstants;
@@ -51,7 +51,7 @@ public class ApplicationModule {
     @Provides
     @DatabaseInfo
     String provideDatabaseName() {
-        return AppConstants.DB_NAME;
+        return AppConstants.DATABASE_NAME;
     }
 
     @Provides
@@ -63,7 +63,7 @@ public class ApplicationModule {
     @Provides
     @PreferenceInfo
     String providePreferenceName() {
-        return AppConstants.PREF_NAME;
+        return AppConstants.PREFERENCE_NAME;
     }
 
     @Provides

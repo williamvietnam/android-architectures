@@ -14,8 +14,8 @@ public final class AppConstants {
 
     public static final int API_STATUS_CODE_LOCAL_ERROR = 0;
 
-    public static final String DB_NAME = "yttm.db";
-    public static final String PREF_NAME = "yttm_pref";
+    public static final String DATABASE_NAME = "app.database";
+    public static final String PREFERENCE_NAME = "app_preference";
 
     public static final long NULL_INDEX = -1L;
 

@@ -22,7 +22,7 @@ public class PreferencesHelperImplement implements PreferencesHelper {
     private final SharedPreferences prefs;
 
     @Inject
-    public PreferencesHelperImplement(@ApplicationContext Context context,
+    public PreferencesHelperImplement(@NonNull @ApplicationContext Context context,
                                       @PreferenceInfo String prefFileName) {
         this.prefs = context.getSharedPreferences(prefFileName, Context.MODE_PRIVATE);
     }
