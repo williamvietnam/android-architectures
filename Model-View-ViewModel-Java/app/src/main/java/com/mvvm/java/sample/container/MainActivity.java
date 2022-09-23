@@ -1,16 +1,17 @@
 package com.mvvm.java.sample.container;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.mvvm.java.core.base.mvvm.MVVMActivity;
+import com.mvvm.java.databinding.ActivityMainBinding;
 
-import android.os.Bundle;
-
-import com.mvvm.java.R;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MVVMActivity<ActivityMainBinding, MainViewModel> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public ActivityMainBinding createViewBinding() {
+        return ActivityMainBinding.inflate(getLayoutInflater());
+    }
+
+    @Override
+    public void setup() {
+
     }
 }

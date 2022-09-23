@@ -1,4 +1,7 @@
 package com.mvvm.java.sample.author;
 
-public class AuthorViewModel {
+import com.mvvm.java.core.base.BaseMvvmViewModel;
+
+public class AuthorViewModel extends BaseMvvmViewModel {
+
 }
