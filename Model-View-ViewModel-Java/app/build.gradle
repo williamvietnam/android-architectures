@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.mvvm.java"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -32,6 +32,34 @@ android {
 }
 
 dependencies {
+    //RoomDatabase
+    implementation "androidx.room:room-runtime:2.4.3"
+    annotationProcessor "androidx.room:room-compiler:2.4.3"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation 'com.google.firebase:firebase-firestore:24.3.1'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //roundedImageview
+    implementation "com.makeramen:roundedimageview:2.3.0"
+
+    //rx3
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    //network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6'
+
     // Multidex
     implementation "androidx.multidex:multidex:2.0.1"
 
@@ -40,15 +68,15 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-compiler:2.41'
 
     //navigation component
-    implementation 'androidx.navigation:navigation-fragment:2.5.0'
-    implementation 'androidx.navigation:navigation-ui:2.5.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
 
     //rx
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
 
     //androidX layout
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //material design 2

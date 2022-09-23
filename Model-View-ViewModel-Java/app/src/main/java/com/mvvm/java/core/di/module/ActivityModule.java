@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.mvvm.java.core.di.ActivityContext;
 import com.mvvm.java.core.utilities.rx.SchedulerProvider;
-import com.mvvm.java.core.utilities.rx.SchedulerProviderImpl;
+import com.mvvm.java.core.utilities.rx.SchedulerProviderImplement;
 
 import dagger.Module;
 import dagger.Provides;
@@ -39,7 +39,7 @@ public class ActivityModule {
 
     @Provides
     SchedulerProvider provideSchedulerProvider() {
-        return new SchedulerProviderImpl();
+        return new SchedulerProviderImplement();
     }
 
 }

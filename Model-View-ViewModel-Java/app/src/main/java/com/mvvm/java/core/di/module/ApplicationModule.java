@@ -3,8 +3,8 @@ package com.mvvm.java.core.di.module;
 import android.app.Application;
 import android.content.Context;
 
-import com.mvvm.java.core.data.local.preferences.PreferencesHelper;
-import com.mvvm.java.core.data.local.preferences.PreferencesHelperImplement;
+import com.mvvm.java.core.data.preferences.PreferencesHelper;
+import com.mvvm.java.core.data.preferences.PreferencesImplement;
 import com.mvvm.java.core.di.ApplicationContext;
 
 import javax.inject.Singleton;
@@ -40,7 +40,7 @@ public class ApplicationModule {
 //
     @Provides
     @Singleton
-    PreferencesHelper providePreferencesHelper(PreferencesHelperImplement preferencesHelperImpl) {
+    PreferencesHelper providePreferencesHelper(PreferencesImplement preferencesHelperImpl) {
         return preferencesHelperImpl;
     }
 //
