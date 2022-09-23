@@ -13,31 +13,39 @@ import javax.inject.Singleton
 @Singleton
 class PreferencesImplement @Inject constructor(
     @ApplicationContext context: Context
-) : RxPreferences {
+) : PreferencesHelper {
 
-    private val mPrefs: SharedPreferences = context.getSharedPreferences(
+    companion object {
+
+        private const val PREF_PARAM_USER_INFO = "PREF_PARAM_USER_INFO"
+
+        private const val PREF_KEY_IS_FIRST_LOGIN = "PREF_KEY_IS_FIRST_LOGIN"
+
+    }
+
+    private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
         Constants.PREF_FILE_NAME,
         Context.MODE_PRIVATE
     )
 
     override fun put(key: String, value: String) {
-        val editor: SharedPreferences.Editor = mPrefs.edit()
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
         editor.putString(key, value)
         editor.apply()
     }
 
     override fun get(key: String): String? {
-        return mPrefs.getString(key, "")
+        return sharedPreferences.getString(key, "")
     }
 
     override fun clear() {
-        val editor: SharedPreferences.Editor = mPrefs.edit()
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
         editor.clear()
         editor.apply()
     }
 
     override fun remove(key: String) {
-        val editor: SharedPreferences.Editor = mPrefs.edit()
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
         editor.remove(key)
         editor.apply()
     }
@@ -53,15 +61,10 @@ class PreferencesImplement @Inject constructor(
     }
 
     override fun isLogin(): Boolean {
-        return mPrefs.getBoolean(PREF_KEY_IS_FIRST_LOGIN, false)
+        return sharedPreferences.getBoolean(PREF_KEY_IS_FIRST_LOGIN, false)
     }
 
     override fun setLogin(isLogin: Boolean) {
-        mPrefs.edit().putBoolean(PREF_KEY_IS_FIRST_LOGIN, isLogin).apply()
+        sharedPreferences.edit().putBoolean(PREF_KEY_IS_FIRST_LOGIN, isLogin).apply()
     }
-
 }
-
-private const val PREF_PARAM_USER_INFO = "PREF_PARAM_USER_INFO"
-
-private const val PREF_KEY_IS_FIRST_LOGIN = "PREF_KEY_IS_FIRST_LOGIN"

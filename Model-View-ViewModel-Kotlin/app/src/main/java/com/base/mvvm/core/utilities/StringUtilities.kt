@@ -148,7 +148,7 @@ object StringUtils {
             }
         }
         if (now)
-            sp.commit()
+            sp.apply()
         else
             sp.apply()
     }

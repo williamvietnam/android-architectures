@@ -1,7 +1,7 @@
 package com.base.mvvm.core.module
 
+import com.base.mvvm.core.data.preferences.PreferencesHelper
 import com.base.mvvm.core.data.preferences.PreferencesImplement
-import com.base.mvvm.core.data.preferences.RxPreferences
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,9 +13,9 @@ import javax.inject.Singleton
  * */
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class SharedPrefsModule {
+abstract class PreferencesModule {
 
     @Binds
     @Singleton
-    abstract fun provideRxPreference(preferences: PreferencesImplement): RxPreferences
+    abstract fun providePreferencesHelper(preferences: PreferencesImplement): PreferencesHelper
 }

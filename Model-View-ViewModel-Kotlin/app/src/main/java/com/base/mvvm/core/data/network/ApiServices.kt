@@ -6,13 +6,13 @@ import retrofit2.http.GET
 /**
  * Author: William Giang Nguyen | 8/7/2022
  * */
-interface ApiInterface {
-    @GET("users")
-     fun getUsers(): List<ApiUser>
+interface ApiServices {
+    @GET(ApiEndpoint.GET_USER_LIST)
+    fun getUsers(): List<ApiUser>
 
-    @GET("more-users")
+    @GET(ApiEndpoint.GET_MORE_USERS)
     suspend fun getMoreUsers(): List<ApiUser>
 
-    @GET("error")
+    @GET(ApiEndpoint.GET_USERS_WITH_ERROR)
     suspend fun getUsersWithError(): List<ApiUser>
 }

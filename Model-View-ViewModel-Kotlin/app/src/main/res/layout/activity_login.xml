@@ -39,7 +39,6 @@
             android:inputType="text"
             android:paddingHorizontal="@dimen/_16sdp"
             android:paddingVertical="@dimen/_8sdp"
-            android:text="@={}"
             android:textColorHint="@color/actionbar_title_color"
             android:textSize="@dimen/_14ssp" />
 
@@ -55,7 +54,6 @@
             android:inputType="textPassword"
             android:paddingHorizontal="@dimen/_16sdp"
             android:paddingVertical="@dimen/_8sdp"
-            android:text="@={}"
             android:textColorHint="@color/actionbar_title_color"
             android:textSize="@dimen/_14ssp" />
 

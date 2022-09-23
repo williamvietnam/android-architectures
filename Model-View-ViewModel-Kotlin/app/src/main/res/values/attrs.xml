@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ToolbarCustomView">
-
+        <attr name="toolbarBackground" format="reference" />
+        <attr name="drawableStart" format="reference" />
+        <attr name="toolbarText" format="string|integer" />
+        <attr name="drawableEnd" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="ToolBarCommon">

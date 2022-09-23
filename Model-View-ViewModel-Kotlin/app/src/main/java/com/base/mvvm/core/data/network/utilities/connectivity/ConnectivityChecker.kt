@@ -1,4 +1,4 @@
-package com.base.mvvm.core.data.network.connectivity
+package com.base.mvvm.core.data.network.utilities.connectivity
 
 /**
  * Author: William Giang Nguyen | 8/7/2022

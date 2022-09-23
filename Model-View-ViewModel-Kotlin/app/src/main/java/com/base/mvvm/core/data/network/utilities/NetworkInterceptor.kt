@@ -1,4 +1,4 @@
-package com.base.mvvm.core.data.network
+package com.base.mvvm.core.data.network.utilities
 
 import com.base.mvvm.core.utilities.Constants.NetworkRequestCode.REQUEST_CODE_400
 import com.base.mvvm.core.utilities.Constants.NetworkRequestCode.REQUEST_CODE_401

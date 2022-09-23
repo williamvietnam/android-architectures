@@ -6,7 +6,7 @@ import javax.inject.Singleton
  * Author: William Giang Nguyen | 8/7/2022
  * */
 @Singleton
-interface RxPreferences {
+interface PreferencesHelper {
     fun put(key: String, value: String)
 
     fun get(key: String): String?
