@@ -31,14 +31,14 @@ public abstract class BaseMvvmFragment<VB extends ViewBinding>
     private static boolean isLoading;
     protected NavController mNavController = null;
 
-    public abstract VB getViewBinding(LayoutInflater layoutInflater, ViewGroup container);
+    public abstract VB createViewBinding(LayoutInflater layoutInflater, ViewGroup container);
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = getViewBinding(inflater, container);
+        binding = createViewBinding(inflater, container);
         return binding.getRoot();
     }
 

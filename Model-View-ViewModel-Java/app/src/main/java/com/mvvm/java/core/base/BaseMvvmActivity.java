@@ -27,21 +27,15 @@ public abstract class BaseMvvmActivity<VB extends ViewBinding>
     private Dialog progressDialog;
     private BroadcastReceiver networkReceiver;
 
-    public abstract VB getViewBinding();
+    public abstract VB createViewBinding();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewBinding = getViewBinding();
+        viewBinding = createViewBinding();
         setContentView(viewBinding.getRoot());
 
         setup();
-    }
-
-
-    @Override
-    public void setup() {
-
     }
 
     @Override

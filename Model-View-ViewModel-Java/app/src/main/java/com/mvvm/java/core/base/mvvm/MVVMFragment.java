@@ -1,10 +1,8 @@
 package com.mvvm.java.core.base.mvvm;
 
 import android.content.Context;
-import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 
 import com.mvvm.java.core.base.BaseMvvmFragment;

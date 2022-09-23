@@ -1,4 +1,6 @@
 package com.mvvm.java.sample.container;
 
-public class MainViewModel {
+import com.mvvm.java.core.base.BaseMvvmViewModel;
+
+public class MainViewModel extends BaseMvvmViewModel {
 }
