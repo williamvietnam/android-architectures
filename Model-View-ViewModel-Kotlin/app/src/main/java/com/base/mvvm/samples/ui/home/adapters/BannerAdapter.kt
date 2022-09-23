@@ -7,8 +7,10 @@ import com.base.mvvm.R
 import com.base.mvvm.databinding.ItemBannerSampleBinding
 import com.base.mvvm.samples.models.Banner
 
-class BannerAdapter(private val banners: List<Banner>, private val callback: CallBack) :
-    RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
+class BannerAdapter(
+    private val banners: List<Banner>,
+    private val callback: CallBack
+) : RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BannerViewHolder {
         return BannerViewHolder(
@@ -28,8 +30,9 @@ class BannerAdapter(private val banners: List<Banner>, private val callback: Cal
         return banners.size
     }
 
-    inner class BannerViewHolder(private val binding: ItemBannerSampleBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class BannerViewHolder(
+        private val binding: ItemBannerSampleBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(position: Int) {
             val item: Banner = banners[position]

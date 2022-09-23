@@ -16,9 +16,4 @@ object Constants {
         const val REQUEST_CODE_404 = 404    //No data error
         const val REQUEST_CODE_500 = 500    //system error
     }
-
-    object ApiComponents {
-        const val BASE_URL = "https://google.com"
-    }
-
 }

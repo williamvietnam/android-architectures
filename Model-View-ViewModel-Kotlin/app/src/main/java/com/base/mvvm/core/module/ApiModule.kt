@@ -2,10 +2,11 @@ package com.base.mvvm.core.module
 
 import android.content.Context
 import android.text.TextUtils
-import com.base.mvvm.core.data.network.ApiInterface
-import com.base.mvvm.core.data.network.AuthApiInterface
-import com.base.mvvm.core.data.network.NetworkInterceptor
-import com.base.mvvm.core.data.preferences.RxPreferences
+import com.base.mvvm.core.data.network.ApiEndpoint
+import com.base.mvvm.core.data.network.ApiServices
+import com.base.mvvm.core.data.network.AuthenticationApiServices
+import com.base.mvvm.core.data.network.utilities.NetworkInterceptor
+import com.base.mvvm.core.data.preferences.PreferencesHelper
 import com.base.mvvm.core.utilities.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -42,46 +43,45 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun provideApiInterface(gson: Gson, client: OkHttpClient)
-            : ApiInterface {
+    fun provideApiServices(gson: Gson, client: OkHttpClient): ApiServices {
         val retrofit = Retrofit.Builder()
-            .baseUrl(Constants.ApiComponents.BASE_URL)
+            .baseUrl(ApiEndpoint.BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
-        return retrofit.create(ApiInterface::class.java)
+        return retrofit.create(ApiServices::class.java)
     }
 
 
     @Provides
     @Singleton
-    fun provideAuthApiInterface(
+    fun provideAuthenticationApiServices(
         gson: Gson,
         client: OkHttpClient
-    ): AuthApiInterface {
+    ): AuthenticationApiServices {
         val retrofit = Retrofit.Builder()
-            .baseUrl(Constants.ApiComponents.BASE_URL)
+            .baseUrl(ApiEndpoint.BASE_URL)
             .client(client)
             .addConverterFactory(NullOnEmptyConverterFactory())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
-        return retrofit.create(AuthApiInterface::class.java)
+        return retrofit.create(AuthenticationApiServices::class.java)
     }
 
     @Provides
     @Singleton
-    fun provideHttpClient(cache: Cache?, rxPreferences: RxPreferences): OkHttpClient {
+    fun provideHttpClient(cache: Cache?, preferencesHelper: PreferencesHelper): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
             .cache(cache)
             .addInterceptor(Interceptor { chain: Interceptor.Chain ->
-                val request = if (!TextUtils.isEmpty(rxPreferences.getToken())) {
+                val request = if (!TextUtils.isEmpty(preferencesHelper.getToken())) {
                     chain.request()
                         .newBuilder()
                         .header("Content-Type", "application/json")
                         .addHeader(
-                            "Authorization", rxPreferences.getToken()!!
+                            "Authorization", preferencesHelper.getToken()!!
                         )
                         .build()
                 } else {
