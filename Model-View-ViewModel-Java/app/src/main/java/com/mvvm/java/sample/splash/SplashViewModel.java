@@ -1,4 +1,6 @@
 package com.mvvm.java.sample.splash;
 
-public class SplashViewModel {
+import com.mvvm.java.core.base.BaseMvvmViewModel;
+
+public class SplashViewModel extends BaseMvvmViewModel {
 }
