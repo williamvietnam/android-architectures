@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2020 RIKKEISOFT
- */
-
 package com.base.mvp.core.base;
 
 import androidx.recyclerview.widget.RecyclerView;
