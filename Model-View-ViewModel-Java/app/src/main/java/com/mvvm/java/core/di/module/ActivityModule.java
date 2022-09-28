@@ -41,5 +41,4 @@ public class ActivityModule {
     SchedulerProvider provideSchedulerProvider() {
         return new SchedulerProviderImplement();
     }
-
 }
