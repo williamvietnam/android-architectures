@@ -1,8 +1,7 @@
-package com.base.mvp.core.base;
-
-import android.view.View;
+package com.mvvm.java.core.base;
 
 import androidx.recyclerview.widget.RecyclerView;
+import android.view.View;
 
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 
