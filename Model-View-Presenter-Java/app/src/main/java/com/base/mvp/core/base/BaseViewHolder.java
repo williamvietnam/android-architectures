@@ -7,10 +7,6 @@ package com.base.mvp.core.base;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
-/**
- * Created by HoangDH  on 24/05/17.
- */
-
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 
     private int mCurrentPosition;
