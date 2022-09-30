@@ -6,4 +6,8 @@
         <attr name="toolbarText" format="string|integer" />
         <attr name="drawableEnd" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="TextField">
+
+    </declare-styleable>
 </resources>
