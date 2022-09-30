@@ -1,4 +1,4 @@
-package com.mvvm.java.sample.splash;
+package com.mvvm.java.sample.login;
 
 import com.mvvm.java.core.base.BaseMvvmViewModel;
 import com.mvvm.java.core.data.DataManager;
@@ -8,12 +8,12 @@ import javax.inject.Inject;
 
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 
-public class SplashViewModel extends BaseMvvmViewModel {
+public class RegisterViewModel extends BaseMvvmViewModel {
 
     @Inject
-    public SplashViewModel(DataManager dataManager,
-                           SchedulerProvider schedulerProvider,
-                           CompositeDisposable compositeDisposable) {
+    public RegisterViewModel(DataManager dataManager,
+                             SchedulerProvider schedulerProvider,
+                             CompositeDisposable compositeDisposable) {
         super(dataManager, schedulerProvider, compositeDisposable);
     }
 

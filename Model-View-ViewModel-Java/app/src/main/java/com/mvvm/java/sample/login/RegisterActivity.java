@@ -2,16 +2,17 @@ package com.mvvm.java.sample.login;
 
 import com.mvvm.java.core.base.mvvm.MVVMActivity;
 import com.mvvm.java.core.di.component.ActivityComponent;
-import com.mvvm.java.databinding.ActivityLoginBinding;
+import com.mvvm.java.databinding.ActivityRegisterBinding;
 
-public class LoginActivity extends MVVMActivity<ActivityLoginBinding, LoginViewModel> {
+public class RegisterActivity extends MVVMActivity<ActivityRegisterBinding, RegisterViewModel> {
+
     @Override
-    public ActivityLoginBinding createViewBinding() {
+    public ActivityRegisterBinding createViewBinding() {
         ActivityComponent component = getActivityComponent();
         if (component != null) {
             component.inject(this);
         }
-        return ActivityLoginBinding.inflate(getLayoutInflater());
+        return ActivityRegisterBinding.inflate(getLayoutInflater());
     }
 
     @Override

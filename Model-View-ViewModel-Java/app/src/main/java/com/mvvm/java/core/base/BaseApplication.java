@@ -22,7 +22,6 @@ public class BaseApplication extends MultiDexApplication {
         return applicationComponent;
     }
 
-
     // Needed to replace the component with a test specific one
     public void setComponent(ApplicationComponent applicationComponent) {
         this.applicationComponent = applicationComponent;

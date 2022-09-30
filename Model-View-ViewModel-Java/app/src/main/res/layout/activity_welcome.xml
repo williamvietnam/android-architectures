@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mvvm.java.core.custom.ToolbarCustomView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
+
+        <include
+            android:id="@+id/indicatorStart"
+            layout="@layout/item_dot_indicator" />
+
+        <include
+            android:id="@+id/indicatorCenter"
+            layout="@layout/item_dot_indicator" />
+
+        <include
+            android:id="@+id/indicatorEnd"
+            layout="@layout/item_dot_indicator" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>
