@@ -8,6 +8,7 @@
     </declare-styleable>
 
     <declare-styleable name="TextField">
-
+        <attr name="hintTextField" format="string|integer" />
+        <attr name="inputTextField" format="string|integer" />
     </declare-styleable>
 </resources>
