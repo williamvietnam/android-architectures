@@ -1,7 +1,11 @@
-# MVVM (Model-View-ViewModel) Architecture Pattern in Android
+## MVVM (Model-View-ViewModel) Architecture Pattern in Android
 1. Model — View — ViewModel (MVVM):
  - is the industry-recognized software architecture pattern that overcomes all drawbacks of MVP and MVC design patterns. 
  - MVVM suggests separating the data presentation logic(Views or UI) from the core business logic part of the application.
+
+<p align="center">
+<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Model-View-ViewModel-Kotlin/assets/mvvm.png">
+</p>
 
 2. The separate code layers of MVVM are:
  - **Model**: This layer is responsible for the abstraction of the data sources. Model and ViewModel work together to get and save the data.
@@ -12,11 +16,15 @@
  - [Model-View-ViewModel using Kotlin](https://github.com/williamvietnam/android-architectures/tree/main/Model-View-ViewModel-Kotlin)
  - [Model-View-ViewModel using Java](https://github.com/williamvietnam/android-architectures/tree/main/Model-View-ViewModel-Java)
 
-# MVP (Model-View-Presenter) Architecture Pattern in Android
+## MVP (Model-View-Presenter) Architecture Pattern in Android
 1. Key Points of MVP Architecture:
  -  Communication between View-Presenter and Presenter-Model happens via an interface(also called Contract).
  - One Presenter class manages one View at a time i.e., there is a one-to-one relationship between Presenter and View.
  - Model and View class doesn’t have knowledge about each other’s existence.
+
+<p align="center">
+<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Model-View-Presenter-Kotlin/assets/mvp.png">
+</p>
 
 2. MVP is widely accepted is that it provides modularity, testability, and a more clean and maintainable codebase. It is composed of the following three components:
  - **Model**: Layer for storing data. It is responsible for handling the domain logic(real-world business rules) and communication with the database and network layers.
