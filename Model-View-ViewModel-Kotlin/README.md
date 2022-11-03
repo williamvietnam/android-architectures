@@ -3,7 +3,7 @@ MVVM architecture is a Model-View-ViewModel architecture that removes the tight 
 Most importantly, in this architecture, the children don't have the direct reference to the parent, they only have the reference by observables.
 
 <p align="center">
-<img alt="MVVM" src="https://github.com/williamvietnam/android/blob/main/assets/android_cover_v1.png">
+<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/tree/main/Model-View-ViewModel-Kotlin">
 </p>
 
 - **Model**: It represents the data and the business logic of the Android Application.
