@@ -1,14 +1,14 @@
 package com.mvc.samples
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.snackbar.Snackbar
 import com.mvc.R
-import com.mvc.samples.databinding.ActivityMainBinding
+import com.mvc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
