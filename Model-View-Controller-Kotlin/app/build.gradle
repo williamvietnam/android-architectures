@@ -38,6 +38,12 @@ android {
 }
 
 dependencies {
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation 'com.google.firebase:firebase-firestore:24.3.1'
+    implementation 'com.google.firebase:firebase-analytics'
 
     //androidX view and viewGroup
     implementation 'androidx.core:core-ktx:1.9.0'
