@@ -22,7 +22,7 @@ class MainSampleActivity : BaseActivityViewModel<ActivityMainSampleBinding, Main
     override val layoutId: Int
         get() = R.layout.activity_main_sample
 
-    override fun getVM(): MainSampleViewModel = viewModel
+    override fun createViewModel(): MainSampleViewModel = viewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

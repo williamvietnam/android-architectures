@@ -25,7 +25,7 @@ class HomeSampleFragment : BaseFragmentViewModel<
 
     private val viewModel: HomeSampleViewModel by viewModels()
 
-    override fun getVM(): HomeSampleViewModel = viewModel
+    override fun createViewModel(): HomeSampleViewModel = viewModel
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)

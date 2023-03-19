@@ -16,11 +16,11 @@ abstract class BaseFragmentViewModel<
 
     private lateinit var viewModel: VM
 
-    abstract fun getVM(): VM
+    abstract fun createViewModel(): VM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = getVM()
+        viewModel = createViewModel()
     }
 
     override fun initView(savedInstanceState: Bundle?) {
