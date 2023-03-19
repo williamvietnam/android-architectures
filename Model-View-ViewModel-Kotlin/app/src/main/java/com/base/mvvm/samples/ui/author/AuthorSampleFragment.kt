@@ -20,7 +20,7 @@ class AuthorSampleFragment : BaseFragmentViewModel<
 
     private val viewModel: AuthorSampleViewModel by viewModels()
 
-    override fun getVM(): AuthorSampleViewModel {
+    override fun createViewModel(): AuthorSampleViewModel {
         return viewModel
     }
 

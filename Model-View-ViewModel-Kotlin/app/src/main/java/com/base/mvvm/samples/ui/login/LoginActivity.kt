@@ -12,7 +12,7 @@ class LoginActivity : BaseActivityViewModel<ActivityLoginBinding, LoginViewModel
     override val layoutId: Int
         get() = R.layout.activity_login
 
-    override fun getVM(): LoginViewModel = viewModel
+    override fun createViewModel(): LoginViewModel = viewModel
 
 
 }

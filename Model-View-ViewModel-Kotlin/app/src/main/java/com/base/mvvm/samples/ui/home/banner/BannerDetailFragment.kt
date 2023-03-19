@@ -20,7 +20,7 @@ class BannerDetailFragment :
     private var bannerId: Int? = null
     private val viewModel: BannerDetailViewModel by viewModels()
 
-    override fun getVM(): BannerDetailViewModel {
+    override fun createViewModel(): BannerDetailViewModel {
         return viewModel
     }
 

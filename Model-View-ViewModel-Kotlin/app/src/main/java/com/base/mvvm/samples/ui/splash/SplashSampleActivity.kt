@@ -21,7 +21,7 @@ class SplashSampleActivity : BaseActivityViewModel<ActivitySplashBinding, Splash
         decideNextScreen(viewModel.decideNextScreen())
     }
 
-    override fun getVM(): SplashViewModel = viewModel
+    override fun createViewModel(): SplashViewModel = viewModel
 
     override val layoutId: Int
         get() = R.layout.activity_splash

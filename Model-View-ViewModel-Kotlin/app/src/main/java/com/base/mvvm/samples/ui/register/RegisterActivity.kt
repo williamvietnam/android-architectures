@@ -12,5 +12,5 @@ class RegisterActivity : BaseActivityViewModel<ActivityRegisterBinding, Register
     override val layoutId: Int
         get() = R.layout.activity_register
 
-    override fun getVM(): RegisterViewModel = viewModel
+    override fun createViewModel(): RegisterViewModel = viewModel
 }
