@@ -56,7 +56,7 @@ abstract class BaseViewAdapter<T>(context: Context, private val mCollection: Lis
         }
 
         fun bindData(item: T) {
-            binding.setVariable(BR.viewModel, item)
+//            binding.setVariable(BR.viewModel, item)
             binding.executePendingBindings()
         }
     }
