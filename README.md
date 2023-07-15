@@ -4,7 +4,7 @@
  - MVVM suggests separating the data presentation logic(Views or UI) from the core business logic part of the application.
 
 <p align="center">
-<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Model-View-ViewModel-Kotlin/assets/mvvm.png">
+<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Android-MVVM-Kotlin/assets/mvvm.png">
 </p>
 
 2. The separate code layers of MVVM are:
@@ -23,7 +23,7 @@
  - Model and View class doesn’t have knowledge about each other’s existence.
 
 <p align="center">
-<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Model-View-Presenter-Kotlin/assets/mvp.png">
+<img alt="MVVM" src="https://github.com/williamvietnam/android-architectures/blob/main/Android-MVP-Kotlin/assets/mvp.png">
 </p>
 
 2. MVP is widely accepted is that it provides modularity, testability, and a more clean and maintainable codebase. It is composed of the following three components:
